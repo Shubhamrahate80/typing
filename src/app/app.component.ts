@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'typing';
+mytext:string='hey shubham.'
+enteredtext:string=''
+
+oninput(value:string){
+  this.enteredtext=value
+  console.log(this.enteredtext)
+}
+
+compare(a1:string,a2:string){
+  if(!a2) return 'pending'
+  return a2===a1 ? "correct":"incorrect"
+}
 }
